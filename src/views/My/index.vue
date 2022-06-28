@@ -1,6 +1,6 @@
 <template>
 <div>
-  <router-view></router-view>
+    My
 </div>
 </template>
 
@@ -21,4 +21,3 @@ export default {
 <style scoped lang='less'>
 
 </style>
-

@@ -1,6 +1,6 @@
 <template>
 <div>
-  <router-view></router-view>
+    首页
 </div>
 </template>
 
@@ -21,4 +21,3 @@ export default {
 <style scoped lang='less'>
 
 </style>
-
