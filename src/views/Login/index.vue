@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar title="账号登录" left-arrow @click-left="onClickLeft" />
+    <van-nav-bar title="账号登录" left-arrow @click-left="$router.back()"/>
 
     <van-form @submit="onSubmit">
       <van-field
@@ -36,21 +36,28 @@ export default {
     }
   },
   methods: {
-    onClickLeft () {
-      // Toast('返回');
-    },
+    // onClickLeft () {
+    //   this.$toast('返回')
+    // },
+
     async onSubmit (values) {
       console.log('submit', values);
+      // let userN = /^[a-zA-Z0-9_-]{4,16}$/
+      // let passW = /^[0-9A-Za-z]{6,16}$/
       try {
         const res = await login(values)
         console.log(res);
-        this.$store.commit('setUser', res.data.data)
-        this.$router.push({ name: 'My' })
+        if(res.data.status === 400 ){
+          return 
+          // alert(res.data.data.description)
+        }
+        this.$store.commit('setUser', res.data.body)
+        this.$toast.success('Login in success')
+        this.$router.push('/my')
       } catch (err) {
         console.log(err);
       }
     },
-
   },
   computed: {},
   watch: {},

@@ -6,6 +6,9 @@ const FindHouse = () => import('@/views/FindHouse')
 const Infomation = () => import('@/views/Infomation')
 const My = () => import('@/views/My')
 const Login = () => import('@/views/Login')
+const CityList = () => import('@/views/CityList')
+const House = () => import('@/views/House')
+const RentHouse = () => import('@/views/RentHouse')
 Vue.use(VueRouter)
 
 const routes = [
@@ -15,11 +18,14 @@ const routes = [
     children: [
       { path: 'home', component: Home, name: 'Home' },
       { path: 'infomation', component: Infomation, name: 'Infomation' },
-      { path: 'my', component: My, anme: 'My' },
+      { path: 'my', component: My, name: 'My' },
       { path: 'findhouse', component: FindHouse, name: 'FindHouse' },
     ]
   },
-  { path: '/login', component: Login, name: 'Login' }
+  { path: '/login', component: Login, name: 'Login' },
+  { path: '/citylist', component: CityList, name: 'CityList' },
+  { path: '/house/:housecode', component: House, name: 'house', props: true },
+  { path: '/renthouse', component: RentHouse, name: 'renthouse' }
 ]
 
 const router = new VueRouter({

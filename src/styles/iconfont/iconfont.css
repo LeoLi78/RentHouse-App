@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'renthouse'; /* Project id 3496467 */
+  src: url('iconfont.woff2?t=1657946789040') format('woff2'),
+    url('iconfont.woff?t=1657946789040') format('woff'),
+    url('iconfont.ttf?t=1657946789040') format('truetype'),
+    url('iconfont.svg?t=1657946789040#renthouse') format('svg');
+}
+
+.renthouse {
+  font-family: 'renthouse' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-kongtiao:before {
+  content: '\e65b';
+}
+
+.icon-reshuiqi:before {
+  content: '\e6fc';
+}
+
+.icon-tianranqi:before {
+  content: '\e60e';
+}
+
+.icon-shafa:before {
+  content: '\e686';
+}
+
+.icon-dianshi:before {
+  content: '\e90a';
+}
+
+.icon-bingxiang:before {
+  content: '\e90b';
+}
+
+.icon-xiyiji:before {
+  content: '\e90d';
+}
+
+.icon-nuanqi:before {
+  content: '\e67d';
+}
+
+.icon-kuandai:before {
+  content: '\e614';
+}
+
+.icon-yigui:before {
+  content: '\e60c';
+}
+
+.icon-xiala:before {
+  content: '\e65c';
+}

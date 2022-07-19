@@ -10,3 +10,9 @@ export const login = ({ username, password }) => {
         }
     })
 }
+
+export const getUserInfo = () => {
+    return request({
+        url: 'user',
+    })
+}
